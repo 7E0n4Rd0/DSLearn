@@ -1,5 +1,6 @@
 package com.leonardo.dslearn.entities;
 
+import com.leonardo.dslearn.Deliver;
 import com.leonardo.dslearn.entities.pk.EnrollmentPK;
 import jakarta.persistence.*;
 
@@ -25,6 +26,9 @@ public class Enrollment implements Serializable {
 
     @ManyToMany(mappedBy = "enrollmentsDone")
     private Set<Lesson> lessonsDone = new HashSet<>();
+
+    @OneToMany(mappedBy = "enrollment")
+    private Set<Deliver> deliveries = new HashSet<>();
 
     public Enrollment(){}
 
