@@ -29,6 +29,22 @@ INSERT INTO tb_section (title, description, position, img_uri, resource_id, prer
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (1, 1, '2020-11-21T13:00:00Z', null, true, false);
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (2, 1, '2020-11-21T15:00:00Z', null, true, false);
 
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 01 do capítulo 01', 1, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (1, 'Material de apoio: abc', 'https://www.youtube.com/watch?v=qflJJO3V6aE');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 02 do capítulo 01', 2, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (2, '', 'https://www.youtube.com/watch?v=qflJJO3V6aE');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 03 do capítulo 01', 3, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (3, '', 'https://www.youtube.com/watch?v=qflJJO3V6aE');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefa do capítulo 01', 4, 1);
+INSERT INTO tb_task (id, description, question_count, approval_count, weight, due_date) VALUES (4, 'Fazer trabalho legal', 5, 4, 1.0, '2020-11-25T13:00:00Z');
+
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
+
+
 INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Primeiro feedback de tarefa: favor revisar', TIMESTAMP WITH TIME ZONE '2020-12-10T13:00:00Z', true, '/offers/1/resource/1/sections/1', 1);
 INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Segundo feedback: favor revisar', TIMESTAMP WITH TIME ZONE '2020-12-12T13:00:00Z', true, '/offers/1/resource/1/sections/1', 1);
 INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Terceiro feedback: favor revisar', TIMESTAMP WITH TIME ZONE '2020-12-14T13:00:00Z', true, '/offers/1/resource/1/sections/1', 1);
