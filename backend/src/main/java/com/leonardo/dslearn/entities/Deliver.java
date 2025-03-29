@@ -1,7 +1,5 @@
-package com.leonardo.dslearn;
+package com.leonardo.dslearn.entities;
 
-import com.leonardo.dslearn.entities.Enrollment;
-import com.leonardo.dslearn.entities.Lesson;
 import com.leonardo.dslearn.entities.enums.DeliverStatus;
 import jakarta.persistence.*;
 

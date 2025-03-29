@@ -1,6 +1,5 @@
 package com.leonardo.dslearn.entities;
 
-import com.leonardo.dslearn.Deliver;
 import com.leonardo.dslearn.entities.pk.EnrollmentPK;
 import jakarta.persistence.*;
 
@@ -87,5 +86,13 @@ public class Enrollment implements Serializable {
 
     public void setOnlyUpdate(boolean onlyUpdate) {
         this.onlyUpdate = onlyUpdate;
+    }
+
+    public Set<Lesson> getLessonsDone() {
+        return lessonsDone;
+    }
+
+    public Set<Deliver> getDeliveries() {
+        return deliveries;
     }
 }
