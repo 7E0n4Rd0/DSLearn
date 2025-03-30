@@ -29,7 +29,7 @@ public class Offer implements Serializable {
     private List<Resource> resources = new ArrayList<>();
 
     @OneToMany(mappedBy = "offer")
-    private Set<Topic> topics = new HashSet<>();
+    private List<Topic> topics = new ArrayList<>();
 
     public Offer(){}
 
@@ -85,7 +85,7 @@ public class Offer implements Serializable {
         return resources;
     }
 
-    public Set<Topic> getTopics() {
+    public List<Topic> getTopics() {
         return topics;
     }
 
